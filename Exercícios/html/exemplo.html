@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria Aromas & Sabores</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos básicos para tornar o site mais apresentável */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #6F4E37; /* Marrom café */
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #4A2B1A; /* Marrom mais escuro */
+            padding: 0.5em 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #8B5E3C;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #6F4E37;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Para centralizar a imagem */
+            margin: 15px auto;
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form input[type="submit"] {
+            background-color: #6F4E37;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form input[type="submit"]:hover {
+            background-color: #8B5E3C;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+        .embed-video {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .embed-video iframe {
+            width: 100%;
+            max-width: 600px; /* Limite para não ficar muito grande */
+            height: 315px; /* Altura padrão para vídeos do YouTube */
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cafeteria Aromas & Sabores</h1>
+        <p>Seu cantinho para apreciar o melhor café!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#produtos">Nossos Cafés</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Bem-vindo à Cafeteria Aromas & Sabores!</h2>
+            <p>Descubra a arte de cada xícara. Aqui, a paixão pelo café se traduz em aromas inesquecíveis e sabores marcantes. Venha nos visitar e embarque nesta jornada sensorial!</p>
+            <img src="https://via.placeholder.com/800x400?text=Caf%C3%A9+Arom%C3%A1tico" alt="Xícara de café com grãos espalhados">
+            <p>Experimente nosso café especial da semana, colhido nas melhores regiões produtoras.</p>
+        </section>
+
+        <hr> <section id="sobre" class="section">
+            <h2>Sobre Nós</h2>
+            <p>Na Aromas & Sabores, somos apaixonados por café. Nossa história começou com o desejo de oferecer uma experiência única aos amantes da bebida. Selecionamos cuidadosamente os grãos, torramos com expertise e preparamos cada xícara com carinho, buscando a perfeição em cada detalhe.</p>
+            <h3>Nossa Missão:</h3>
+            <ul>
+                <li>Oferecer cafés de alta qualidade e procedência.</li>
+                <li>Criar um ambiente acolhedor e convidativo.</li>
+                <li>Promover a cultura do café e suas nuances.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="produtos" class="section">
+            <h2>Nossos Cafés</h2>
+            <p>Conheça nossa seleção de cafés especiais:</p>
+            <ol>
+                <li>Café Espresso Tradicional</li>
+                <li>Cappuccino Cremoso</li>
+                <li>Latte Artístico</li>
+                <li>Café Coado Especial</li>
+                <li>Mocaccino com Chantilly</li>
+            </ol>
+
+            <h3>Tabela de Preços (Exemplo):</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço (R$)</th>
+                        <th>Tamanho</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Espresso</td>
+                        <td>5,00</td>
+                        <td>Pequeno</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td>9,00</td>
+                        <td>Médio</td>
+                    </tr>
+                    <tr>
+                        <td>Café Coado</td>
+                        <td>7,00</td>
+                        <td>Grande</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Assista um pouco sobre o preparo do café:</h2>
+            <div class="embed-video">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Este vídeo é apenas um exemplo. Por favor, substitua-o pelo vídeo desejado.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contato" class="section">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida ou gostaria de fazer um pedido? Preencha o formulário abaixo:</p>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <input type="submit" value="Enviar Mensagem">
+            </form>
+            <p>Ou ligue para nós: (82) 99999-9999</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cafeteria Aromas & Sabores. Todos os direitos reservados.</p>
+        <p><a href="#topo" style="color: white; text-decoration: none;">Voltar ao Topo</a></p>
+    </footer>
+
+</body>
+</html>
