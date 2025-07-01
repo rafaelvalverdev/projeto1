@@ -1,2 +1,2 @@
-# projeto1
-aprendendo a usar o git 06052025
+# Estudos
+aprendendo a usar ferramentas.
