@@ -7,17 +7,14 @@ app.config.from_object(Config)  # Carrega as configurações do config.py
 
 db.init_app(app)  # Inicializa o SQLAlchemy com o aplicativo Flask
 
-# Contexto de aplicação: necessário para usar db.create_all() fora de uma requisição
 with app.app_context():
     db.create_all()  # Cria as tabelas no banco de dados, se elas não existirem
 
-# --- Rotas da Aplicação ---
+# --- Rotas da Aplicaão ---
 
 
 @app.route('/')
 def index():
-    # Ordena as tarefas: as não concluídas primeiro, depois as concluídas.
-    # Dentro de cada grupo, ordena pela data de criação.
     tarefas = Tarefa.query.order_by(
         Tarefa.concluida.asc(), Tarefa.data_criacao.desc()).all()
     return render_template('index.html', tarefas=tarefas)
@@ -54,7 +51,6 @@ def edit_tarefa(tarefa_id):
         tarefa.descricao = request.form.get('descricao')
         db.session.commit()
         return redirect(url_for('index'))
-    # Criaremos este template depois
     return render_template('edit.html', tarefa=tarefa)
 
 
@@ -67,5 +63,4 @@ def delete_tarefa(tarefa_id):
 
 
 if __name__ == '__main__':
-    # Roda o aplicativo em modo debug (ótimo para desenvolvimento)
     app.run(debug=True)
