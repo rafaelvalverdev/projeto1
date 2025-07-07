@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Lista de Tarefas</h1>
+
+        <form action="{{ url_for('add_tarefa') }}" method="POST" class="add-form">
+            <input type="text" name="titulo" placeholder="Título da nova tarefa" required>
+            <textarea name="descricao" placeholder="Descrição (opcional)"></textarea>
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+
+        <ul class="task-list">
+            {% for tarefa in tarefas %}
+                <li class="{{ 'completed' if tarefa.concluida }}">
+                    <div class="task-info">
+                        <h3>{{ tarefa.titulo }}</h3>
+                        {% if tarefa.descricao %}
+                            <p>{{ tarefa.descricao }}</p>
+                        {% endif %}
+                        <small>Criada em: {{ tarefa.data_criacao.strftime('%d/%m/%Y %H:%M') }}</small>
+                    </div>
+                    <div class="task-actions">
+                        <a href="{{ url_for('toggle_concluida', tarefa_id=tarefa.id) }}" class="button toggle-button">
+                            {% if tarefa.concluida %}Desmarcar{% else %}Concluir{% endif %}
+                        </a>
+                        <a href="{{ url_for('edit_tarefa', tarefa_id=tarefa.id) }}" class="button edit-button">Editar</a>
+                        <a href="{{ url_for('delete_tarefa', tarefa_id=tarefa.id) }}" class="button delete-button" onclick="return confirm('Tem certeza que deseja excluir esta tarefa?');">Excluir</a>
+                    </div>
+                </li>
+            {% else %}
+                <p class="no-tasks">Nenhuma tarefa cadastrada ainda. Que tal adicionar uma?</p>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

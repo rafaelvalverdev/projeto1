@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.add-form, .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.add-form input[type="text"],
+.edit-form input[type="text"],
+.add-form textarea,
+.edit-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 22px); /* Ajuste para o padding */
+    resize: vertical; /* Permite redimensionar a textarea verticalmente */
+}
+
+.add-form button, .edit-form button, .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Para botões que são links */
+    display: inline-block; /* Para botões que são links */
+}
+
+.add-form button:hover, .edit-form button:hover, .button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.task-list li.completed {
+    background-color: #e0ffe0;
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-info h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.task-info p {
+    margin: 0 0 5px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.task-info small {
+    color: #888;
+    font-size: 0.8em;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-button {
+    background-color: #28a745; /* Verde */
+}
+.toggle-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    background-color: #ffc107; /* Amarelo */
+    color: #333;
+}
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Vermelho */
+}
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.cancel-button {
+    background-color: #6c757d; /* Cinza */
+    margin-left: 10px;
+}
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+.no-tasks {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
