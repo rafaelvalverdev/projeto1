@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for  # type: ignore
 from config import Config
 from models import db, Tarefa
 
